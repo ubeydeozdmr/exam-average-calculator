@@ -1,0 +1,11 @@
+{
+  "name": "exam-average-calculator",
+  "version": "0.1.0",
+  "description": "Exam average calculator",
+  "main": "index.js",
+  "keywords": [
+    "exam"
+  ],
+  "author": "Ubeyde Emir Özdemir",
+  "license": "MIT"
+}

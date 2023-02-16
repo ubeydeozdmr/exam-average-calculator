@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <script src="src/js/script.js" type="module" defer></script>
+    <title>Exam Average Calculator</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <h1 class="header__title">Exam Average Calculator</h1>
+    </header>
+
+    <section class="content">
+      <table class="table">
+        <thead class="thead">
+          <th class="thead__item">Lesson Name</th>
+          <th class="thead__item">Coefficient</th>
+          <th class="thead__item">Exam 1</th>
+          <th class="thead__item">Exam 2</th>
+          <th class="thead__item">Exam 3</th>
+          <th class="thead__item">Perf 1</th>
+          <th class="thead__item">Perf 2</th>
+          <th class="thead__item">Perf 3</th>
+          <th class="thead__item">Average</th>
+          <th class="thead__item">Delete</th>
+        </thead>
+        <tbody class="tbody"></tbody>
+      </table>
+    </section>
+
+    <div class="blank"></div>
+
+    <aside class="bottom-panel">
+      <p class="average-text">
+        Your average is: <span class="average" id="average">-</span>
+      </p>
+      <button class="add-lesson-btn" id="add-lesson-btn" type="button">
+        &plus; Add Lesson
+      </button>
+    </aside>
+    <aside class="add-new-lesson-panel" id="add-new-lesson-panel">
+      <h2 class="add-new-lesson-panel__title">Add New Lesson</h2>
+      <button
+        class="add-new-lesson-panel__cancel-btn"
+        id="add-new-lesson-panel__cancel-btn"
+        title="cancel"
+        type="button"
+      >
+        <svg
+          class="add-new-lesson-panel__cancel-btn__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+          />
+          <path d="M0 0h24v24H0z" fill="none" />
+        </svg>
+      </button>
+      <div class="add-new-lesson-panel__form">
+        <div class="add-new-lesson-panel__form__group">
+          <label for="lesson-name" class="add-new-lesson-panel__form__label"
+            >Lesson Name</label
+          >
+          <input
+            type="text"
+            id="lesson-name"
+            class="add-new-lesson-panel__form__input"
+            placeholder="Lesson name"
+          />
+        </div>
+        <div class="add-new-lesson-panel__form__group">
+          <label for="coefficient" class="add-new-lesson-panel__form__label"
+            >Coefficient</label
+          >
+          <input
+            type="number"
+            id="coefficient"
+            class="add-new-lesson-panel__form__input"
+            placeholder="Coefficient"
+            min="1"
+            max="10"
+          />
+        </div>
+        <div class="add-new-lesson-panel__form__group">
+          <label for="exam-1" class="add-new-lesson-panel__form__label"
+            >Exam 1</label
+          >
+          <input
+            type="number"
+            id="exam-1"
+            class="add-new-lesson-panel__form__input"
+            placeholder="Exam 1"
+            min="0"
+            max="100"
+          />
+        </div>
+        <div class="add-new-lesson-panel__form__group">
+          <label for="exam-2" class="add-new-lesson-panel__form__label"
+            >Exam 2</label
+          >
+          <input
+            type="number"
+            id="exam-2"
+            class="add-new-lesson-panel__form__input"
+            placeholder="Exam 2"
+            min="0"
+            max="100"
+          />
+        </div>
+        <div class="add-new-lesson-panel__form__group">
+          <label for="exam-3" class="add-new-lesson-panel__form__label"
+            >Exam 3</label
+          >
+          <input
+            type="number"
+            id="exam-3"
+            class="add-new-lesson-panel__form__input"
+            placeholder="Exam 3"
+            min="0"
+            max="100"
+          />
+        </div>
+        <div class="add-new-lesson-panel__form__group">
+          <label for="perf-1" class="add-new-lesson-panel__form__label"
+            >Perf 1</label
+          >
+          <input
+            type="number"
+            id="perf-1"
+            class="add-new-lesson-panel__form__input"
+            placeholder="Perf 1"
+            min="0"
+            max="100"
+          />
+        </div>
+        <div class="add-new-lesson-panel__form__group">
+          <label for="perf-2" class="add-new-lesson-panel__form__label"
+            >Perf 2</label
+          >
+          <input
+            type="number"
+            id="perf-2"
+            class="add-new-lesson-panel__form__input"
+            placeholder="Perf 2"
+            min="0"
+            max="100"
+          />
+        </div>
+        <div class="add-new-lesson-panel__form__group">
+          <label for="perf-3" class="add-new-lesson-panel__form__label"
+            >Perf 3</label
+          >
+          <input
+            type="number"
+            id="perf-3"
+            class="add-new-lesson-panel__form__input"
+            placeholder="Perf 3"
+            min="0"
+            max="100"
+          />
+        </div>
+        <button
+          class="add-new-lesson-panel__form__button"
+          id="add-new-lesson-panel__form__button"
+          type="button"
+        >
+          &plus; Add
+        </button>
+      </div>
+    </aside>
+  </body>
+</html>

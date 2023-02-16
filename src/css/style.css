@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --primary-color-hover: #333;
+  --secondary-color-hover: #eee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header.header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 10px;
+}
+
+h1.header__title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+section.content {
+  /* padding: 10px; */
+  overflow-x: auto;
+}
+
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead.thead {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+th.thead__item {
+  padding: 10px;
+  text-align: left;
+}
+
+tbody.tbody {
+  background-color: var(--secondary-color);
+}
+
+tr.tbody__row {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+td.tbody__item {
+  padding: 10px;
+}
+
+input.tbody__input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+div.blank {
+  height: 12vh;
+}
+
+aside.bottom-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 12vh;
+  background-color: rgba(0, 0, 0, 1);
+  color: #fff;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+p.average-text {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+span.average {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: bolder;
+}
+
+button.tbody__btn {
+  border: none;
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+button.add-lesson-btn {
+  border: none;
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+aside.add-new-lesson-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: none;
+}
+
+aside.add-new-lesson-panel.show {
+  display: block;
+}
+
+h2.add-new-lesson-panel__title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 10px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+button.add-new-lesson-panel__cancel-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: red;
+  border-radius: 4px;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+button.add-new-lesson-panel__button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+div.add-new-lesson-panel__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--secondary-color);
+  padding: 20px;
+}
+
+div.add-new-lesson-panel__form__group {
+  margin-bottom: 10px;
+}
+
+label.add-new-lesson-panel__form__label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input.add-new-lesson-panel__form__input {
+  width: 100%;
+  border: 1px solid var(--primary-color);
+  padding: 5px;
+}
+
+button.add-new-lesson-panel__form__button {
+  width: 100%;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
