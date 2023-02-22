@@ -106,6 +106,15 @@ button.tbody__btn {
   font-size: 0.8rem;
   cursor: pointer;
   text-align: left;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+button.tbody__btn:hover,
+button.tbody__btn:focus,
+button.tbody__btn:active {
+  background-color: #f00;
+  color: var(--secondary-color-hover);
 }
 
 button.add-lesson-btn {
@@ -114,6 +123,15 @@ button.add-lesson-btn {
   color: var(--secondary-color);
   font-size: 1.5rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+button.add-lesson-btn:hover,
+button.add-lesson-btn:focus,
+button.add-lesson-btn:active {
+  background-color: var(--primary-color-hover);
+  color: var(--secondary-color-hover);
 }
 
 aside.add-new-lesson-panel {
@@ -151,15 +169,10 @@ button.add-new-lesson-panel__cancel-btn {
   cursor: pointer;
 }
 
-button.add-new-lesson-panel__button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  background-color: transparent;
-  color: var(--secondary-color);
-  font-size: 1.5rem;
-  cursor: pointer;
+button.add-new-lesson-panel__cancel-btn:hover,
+button.add-new-lesson-panel__cancel-btn:focus,
+button.add-new-lesson-panel__cancel-btn:active {
+  background-color: #c00;
 }
 
 div.add-new-lesson-panel__form {
@@ -195,6 +208,13 @@ button.add-new-lesson-panel__form__button {
   color: var(--secondary-color);
   padding: 5px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.add-new-lesson-panel__form__button:hover,
+button.add-new-lesson-panel__form__button:focus,
+button.add-new-lesson-panel__form__button:active {
+  background-color: var(--primary-color-hover);
 }
 
 .hidden {
