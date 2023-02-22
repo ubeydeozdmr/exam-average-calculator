@@ -151,22 +151,22 @@ function lessonRow(lesson) {
 }
 
 function addLesson() {
-  const name = document.getElementById('lesson-name').value;
-  const coefficient = +document.getElementById('coefficient').value;
-  const exam1 = +document.getElementById('exam-1').value;
-  const exam2 = +document.getElementById('exam-2').value;
-  const exam3 = +document.getElementById('exam-3').value;
-  const perf1 = +document.getElementById('perf-1').value;
-  const perf2 = +document.getElementById('perf-2').value;
-  const perf3 = +document.getElementById('perf-3').value;
+  const name = document.getElementById('lesson-name');
+  const coefficient = document.getElementById('coefficient');
+  const exam1 = document.getElementById('exam-1');
+  const exam2 = document.getElementById('exam-2');
+  const exam3 = document.getElementById('exam-3');
+  const perf1 = document.getElementById('perf-1');
+  const perf2 = document.getElementById('perf-2');
+  const perf3 = document.getElementById('perf-3');
   if (!(name && coefficient)) return alert('Name and coefficient are required');
   const lesson = {
     id: Date.now(),
-    name,
-    coefficient,
+    name: name.value,
+    coefficient: +coefficient.value,
     marks: {
-      exam: [exam1, exam2, exam3],
-      perf: [perf1, perf2, perf3],
+      exam: [+exam1.value, +exam2.value, +exam3.value],
+      perf: [+perf1.value, +perf2.value, +perf3.value],
     },
   };
   const marksFlat = [...lesson.marks.exam, ...lesson.marks.perf];
@@ -177,6 +177,14 @@ function addLesson() {
   lessons.push(lesson);
   updateLocalStorage();
   generalAverage();
+  [name, coefficient, exam1, exam2, exam3, perf1, perf2, perf3].forEach(
+    (input) => (input.value = '')
+  );
+  const inputFields = document.querySelectorAll('.tbody__input');
+  inputFields.forEach((input) => {
+    input.addEventListener('input', editLesson);
+  });
+  hidePanel();
 }
 
 function editLesson(e) {
@@ -253,6 +261,10 @@ function init() {
   const inputFields = document.querySelectorAll('.tbody__input');
   inputFields.forEach((input) => {
     input.addEventListener('input', editLesson);
+  });
+
+  panel.addEventListener('click', (e) => {
+    if (e.target.id === 'add-new-lesson-panel') hidePanel();
   });
 }
 
